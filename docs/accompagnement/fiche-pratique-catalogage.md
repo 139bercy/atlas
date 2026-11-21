@@ -2,9 +2,11 @@
 
 *Mise à jour : 21 novembre 2026*
 
-## À quoi sert le catalogue ?
+> **Atlas Bercy est un prototype.** Il est accessible à l'adresse [https://proto-catalogue-donnees.lab.miweb.run](https://proto-catalogue-donnees.lab.miweb.run). Les données qu'il contient sont fictives : l'application l'indique par le badge « Prototype — données fictives ». Pour vous connecter, vous recevez un lien par courriel (voir « Se connecter »).
 
-Atlas Bercy est le catalogue des données des ministères économiques et financiers (MEF). Il s'appuie sur un classeur Grist partagé permettant de cartographier, qualifier et mettre à disposition les jeux de données produits par les bureaux et directions des ministères économiques et financiers.
+## À quoi sert Atlas Bercy ?
+
+Atlas Bercy est le catalogue des données des ministères économiques et financiers (MEF). Il permet de décrire, de retrouver, de qualifier et de demander les jeux de données produits par les bureaux et directions.
 
 Il répond à trois enjeux :
 
@@ -12,205 +14,202 @@ Il répond à trois enjeux :
 - **Conformité** : inventaire du patrimoine documentaire (RIP, art. L322-6 CRPA), registre des traitements (RGPD, art. 30).
 - **Confiance** : chaque fiche indique qui produit, qui contacter, quelle est la sensibilité et la fraîcheur des données.
 
-Lien d'accès : [Catalogue Grist MEF](https://grist.numerique.gouv.fr/o/catalogue/fWWMJ5ZVPQ5o/Data-Catalog-MEF)
+**Décrire une donnée n'est pas l'ouvrir.** Une fiche dit qu'une donnée existe et à qui la demander. Une donnée fermée reste fermée. Le catalogue ne publie pas les données.
 
-## Pour le commanditaire (Chef de bureau / Direction)
+## Se connecter
 
-Cette section s'adresse au responsable de la publication au sein de l'entité. Elle définit le périmètre de la saisie et l'organisation interne pour mener à bien le catalogage.
+1. Ouvrez Atlas Bercy et cliquez sur **Se connecter**.
+2. Saisissez votre adresse électronique professionnelle, puis cliquez sur **Recevoir un lien de connexion**.
+3. Ouvrez le courriel reçu et cliquez sur le lien. Il est valable 30 minutes (durée par défaut) et ne sert qu'une fois.
+4. Vous restez connecté 8 heures (durée par défaut). Ensuite, demandez un nouveau lien.
 
-### Qu'est-ce qu'un "jeu de données" (périmètre) ?
+Sans connexion, le menu ne propose que la recherche et l'aide.
 
-Un **jeu de données (dataset)** est une collection cohérente de données structurées (lignes/colonnes, fichiers connexes) répondant à une même thématique ou un même processus métier (ex: *Dépenses PLF 2025*, *Annuaire des entités*).
+Ce que vous pouvez faire dépend de vos droits : consulter, saisir, valider. Ouvrez le menu de votre nom, puis **Mes droits**, pour les voir. Si un droit vous manque, ouvrez **Demander des droits**. Vous pouvez la déposer pour vous ou pour un collaborateur. L'AMDAC instruit la demande.
 
-*   **À cataloguer** : Les tables de données pérennes, les référentiels métiers, les bases de données de production ou d'études.
-*   **À ne pas cataloguer** : Les simples documents bureautiques de travail temporaire, les présentations PowerPoint, ou les rapports d'analyse textuels (sauf s'ils accompagnent un jeu de données en tant que pièce jointe).
+## Rechercher une donnée
 
-### Qui désigner dans mon équipe pour la saisie ?
+Ouvrez **Rechercher une donnée**. La recherche porte sur le titre, la description et les mots-clés des fiches que vous avez le droit de lire.
 
-La saisie des métadonnées nécessite avant tout une **connaissance métier** de la donnée plutôt que des compétences techniques en informatique ou en data science.
-*   **Profil recommandé** : Un chargé d'études, un gestionnaire d'application ou un assistant administratif familier avec le sujet traité.
-*   **Compétences requises** : Savoir d'où vient la donnée, qui l'utilise, sa fréquence de mise à jour, et son niveau de sensibilité.
+- **Filtres** : direction productrice, thème principal, accès à la donnée (statut de publication), année de mise à jour de la donnée. Seules les valeurs présentes dans les fiches que vous pouvez lire sont proposées. Cliquez sur **Appliquer les filtres**, ou sur **Réinitialiser**.
+- **Affichage** : les boutons **Cartes** et **Tableau** changent la vue. Dans le tableau, un clic sur le titre d'une colonne trie les résultats.
+- **Export** : le bouton d'export télécharge les résultats au format CSV.
+- **Proche par le sens** : ce badge signale une fiche trouvée par proximité de sens, et non par ses mots exacts. La recherche par le sens complète automatiquement la recherche par mots-clés. Si elle ne répond pas, Atlas Bercy l'indique et n'utilise que les mots-clés.
 
-### Circuit de validation et gouvernance
+Vous ne trouvez pas votre donnée ? Utilisez **Faire une demande** (voir « Demander une donnée »).
 
-1.  **Désignation** : Le commanditaire désigne le saisisseur et lui transmet les accès (via le kit d'onboarding).
-2.  **Saisie** : Le saisisseur remplit la fiche (idéalement jusqu'au Niveau 3 ou 4) et la laisse au statut `À vérifier (métier)` ou `En cours`.
-3.  **Validation interne** : Le commanditaire valide l'exactitude des métadonnées métiers.
-4.  **Qualification AMDAC** : La mission AMDAC [amd@finances.gouv.fr](mailto:amd@finances.gouv.fr) effectue un audit de qualité et passe le statut à `Qualifié` ou `Certifié`.
+## Saisir une fiche
 
----
+Il faut un droit de saisie. Cliquez sur **Saisir une fiche** dans le menu. Quatre champs suffisent pour enregistrer une première version. Vous complétez le reste maintenant ou plus tard.
 
-## Comment accéder au formulaire
+### L'essentiel
 
-1. Ouvrir le lien ci-dessus dans votre navigateur.
-2. Dans la barre de tables (en haut à gauche de Grist), cliquer sur le bouton **Je veux saisir une donnée** (widget formulaire).
-3. Le formulaire s'ouvre. Deux modes sont disponibles :
+| Libellé | Obligatoire | Conseil |
+|---------|:-----------:|---------|
+| **Titre du jeu de données** | Oui | 5 à 10 mots, 200 caractères au plus. |
+| **Bureau producteur** | Oui | Seuls les bureaux de votre périmètre d'écriture sont proposés. |
+| **Description** | Oui | Environ un paragraphe : ce que contient la donnée, sa maille, ce qu'elle permet de faire. |
+| **Mots-clés** | Oui | Au moins un, séparés par des virgules. |
+| **URL du jeu de données** | Non | Page qui présente la donnée (intranet, portail métier). |
 
-| Mode | Comportement |
-|------|-------------|
-| **Express** (défaut) | Seuls les champs du Niveau 1 (Identification) sont visibles. Le reste est masqué. |
-| **Avancé** | Toutes les sections sont ouvertes. Permet de remplir le catalogue en une fois. |
+**Qu'est-ce qu'un bon titre ?**
 
-Pour changer de mode, cliquer sur le bouton **Mode Avancé** / **Mode Express** en haut à droite du formulaire.
-
----
-
-## Structure du formulaire : 5 niveaux progressifs
-
-Le formulaire est divisé en 5 sections, chacune correspondant à un niveau de saturation des métadonnées. Vous pouvez vous arrêter à n'importe quel niveau, mais plus vous remplissez, plus vos données seront découvrables et fiables, notamment par les IA !
-
-### Niveau 1 — Identification (toujours visible)
-
-C'est le minimum pour créer une fiche. Les champs marqués d'un astérisque (*) sont **obligatoires**.
-
-| Label affiché | Type | Obligatoire | Source de référence |
-|---------------|------|:-----------:|---------------------|
-| **Titre** | Texte libre | * | `Titre` (Grist) |
-| **Bureau producteur** | Recherche arborescente (autocomplétion) | * | `Bureau_Producteur` → Ref_Entité |
-| **URL du dataset** | URL | | `URL` (Grist) |
-| **Point de contact service (BALF)** | Texte lu en lecture seule | | Déduit automatiquement de la boîte fonctionnelle du bureau sélectionné |
-| **Description** | Zone de texte (4 lignes) | * | `Description` (Grist) |
-| **Mots-clés** | Texte libre (séparé par des virgules) | * | `Mots_Cles` (Grist) |
-
-**Astuce bureau producteur** : le champ accepte la frappe libre avec filtrage automatique. Tapez les premières lettres de votre bureau pour faire apparaître les correspondances dans l'arborescence. Le **point de contact service (BALF)** se remplit automatiquement à partir de la boîte fonctionnelle (BALF) du bureau sélectionné. Sinon, il faudra penser à le renseigner dans la table [Entités](https://grist.numerique.gouv.fr/o/data-catalog-mef/jRe26weQFnz8/Catalogue/p/26). 
-
-**Qu'est-ce qu'un bon Titre ?**
-
-*   **Longueur** : 5 à 10 mots, maximum 170 caractères.
-*   **Règle** : Il doit être explicite pour une personne externe à votre bureau. Évitez les acronymes internes non explicités.
+*   **Longueur** : 5 à 10 mots, maximum 200 caractères.
+*   **Règle** : il doit être explicite pour une personne extérieure à votre bureau. Évitez les acronymes internes non explicités.
 *   *Exemple à éviter* : `Base PLF final v2`
 *   *Exemple recommandé* : `Dépenses du Projet de Loi de Finances (PLF) par programme budgétaire`
 
-**Qu'est-ce qu'une bonne Description ?**
+**Qu'est-ce qu'une bonne description ?**
 
 *   **Longueur** : 300 à 500 caractères (environ un paragraphe).
-*   **Contenu** : Expliquez l'objectif du jeu de données, la population concernée, l'origine de la collecte et les éventuelles limites d'utilisation. Explicitez systématiquement les termes ou notions techniques complexes.
+*   **Contenu** : expliquez l'objectif du jeu de données, la population concernée, l'origine de la collecte et les éventuelles limites d'utilisation. Explicitez les termes techniques complexes.
+*   **Lecteur visé** : écrivez pour un agent d'une autre direction.
 *   *Exemple recommandé* : `Ce jeu de données retrace l'ensemble des crédits de paiement et des autorisations d'engagement votés dans le cadre du Projet de Loi de Finances (PLF) pour l'année civile. Il détaille les montants par programme budgétaire et par ministère, permettant de suivre les orientations budgétaires de l'État.`
 
-**Qu'est-ce qu'un bon ensemble de Mots-clés ?**
+**Qu'est-ce qu'un bon ensemble de mots-clés ?**
 
-*   **Quantité** : 3 à 7 mots-clés, séparés par des virgules.
-*   **Règle** : Utilisez des termes génériques et des synonymes usuels.
+*   **Quantité** : 3 à 7 mots-clés, séparés par des virgules. Vous pouvez en coller plusieurs d'un coup.
+*   **Règle** : utilisez les mots que quelqu'un taperait pour trouver la donnée : termes génériques et synonymes usuels. Choisissez parmi les mots-clés existants ou ajoutez-en.
 *   *Exemple recommandé* : `fiscalité, budget de l'Etat, plf, dépenses publiques, comptabilité publique`
 
-### Niveau 2 — Classification (accordéon)
+**Votre bureau n'est pas dans la liste ?** Deux solutions :
 
-Qualifie le jeu de données pour le tri et les filtres.
+*   Si vous ne connaissez pas le bureau, choisissez la direction ou le service, en tête de liste. La fiche est enregistrée et marquée « bureau à préciser ». Cela ne bloque pas, mais cela baisse un peu la complétude (voir plus bas).
+*   Sinon, ouvrez « Ce bureau n'est pas dans la liste : le proposer ». Le bureau est ajouté et sélectionné tout de suite, marqué « à confirmer » jusqu'à sa vérification par l'AMDAC.
 
-| Label affiché | Type | Valeurs possibles | Source de référence |
-|---------------|------|-------------------|---------------------|
-| **Statut de publication** | Liste déroulante | `Données ouvertes`, `Données fermées`, `Données réglementées` | `Statut_Publication` (Grist) |
-| **Niveau de sensibilité** | Liste à sélection multiple | `Open data`, `Diffusion restreinte`, `Données personnelles (RGPD)`, `Diffusion contrainte`, `Confidentiel` | `Niveau_Sensibilite` (Grist) |
-| **Domaine fonctionnel** | Liste déroulante | Sélectionner dans la liste chargée automatiquement | `Domaine_Fonctionnel` → Ref_Thème |
-| **Langue du dataset** | Liste déroulante | `Français (FR)`, `Anglais (EN)`, `Allemand (DE)`, `Espagnol (ES)`, `Autre` | `Langue` (Grist) |
-| **Couverture géographique** | Liste à sélection multiple | Chargée depuis Ref_GéographicalCoverage | `Couverture_Geo` (Grist) |
-| **Période de couverture (Début)** | Sélecteur de date | Format `AAAA-MM-JJ` | `Periode_de_couverture_Date_de_debut` (Grist) |
-| **Période de couverture (Fin)** | Sélecteur de date | Format `AAAA-MM-JJ` | `Periode_de_couverture_Date_de_fin` (Grist) |
+### Compléter la fiche
 
-### Niveau 3 — Organisation (accordéon)
+Le bouton **Compléter la fiche** ouvre les champs facultatifs. Ils sont groupés par ce qu'ils apportent. Rien n'est perdu si vous enregistrez avant : vous pouvez revenir à tout moment.
 
-Rattache le dataset à la structure ministérielle et aux systèmes d'information.
+**Pour qu'on la retrouve**
 
-| Label affiché | Type | Source de référence |
-|---------------|------|---------------------|
-| **Contact principal** | Liste déroulante | `Contact` → Ref_Utilisateur |
-| **Commanditaire / Propriétaire** | Texte libre | `Commanditaire` (Grist) |
-| **Fréquence de mise à jour** | Liste déroulante | `Frequence_MaJ` → Ref_Frequency |
-| **Système d'information** | Liste à sélection multiple | `Systeme_d_Information` → Ref_InformationSystem |
-| **Date de publication** | Sélecteur de date | `Date_Publication` (Grist) |
-| **Dernière mise à jour** | Sélecteur de date | `Date_MaJ` (Grist) |
+| Libellé | Remarque |
+|---------|----------|
+| Statut de publication | « Données ouvertes » se déduit de ce champ. |
+| Motif de restriction | Si la donnée n'est pas ouverte : pourquoi, et à quelles conditions elle peut être obtenue. Affiché dans l'encart « Accès à la donnée ». |
+| Niveau de sensibilité | Un seul niveau : le plus restrictif qui s'applique. |
+| La donnée contient des données à caractère personnel | Case à cocher (RGPD). Indépendante du niveau de sensibilité. |
+| Thème principal | Le classement sous lequel un collègue chercherait d'abord la donnée. |
+| Thèmes secondaires | Ne répétez pas le thème principal. |
+| Langue | |
+| Couverture géographique | La maille territoriale : un seul niveau. |
+| Période couverte : début | Date. |
+| Période couverte : fin | Date. |
 
-### Niveau 4 — Technique & Distribution (accordéon)
+Aucun thème ne convient ? Utilisez « Aucun thème ne convient ? Suggérer un thème », sous « Thème principal ». L'AMDAC traite votre suggestion.
 
-Détails d'accès physique et informations techniques.
+**Qui la produit et la met à jour**
 
-| Label affiché | Type | Source de référence |
-|---------------|------|---------------------|
-| **URL de téléchargement direct** | URL | `URL_de_telechargement` (Grist) |
-| **Format des données** | Liste à sélection multiple | `Format_Donnees` → Ref_Format |
-| **Licence juridique** | Liste déroulante | `Licence` → Ref_Licence |
-| **Volumétrie (Mo)** | Nombre (décimal) | `Volumetrie_en_Mo_` (Grist) |
-| **Données ouvertes (Open Data)** | Case à cocher | `Donnees_ouvertes` (Grist) |
-| **URL Open Data** | URL | `URL_Open_Data` (Grist) |
+| Libellé | Remarque |
+|---------|----------|
+| Point de contact : entité | Sa boîte fonctionnelle (BALF) est reprise du référentiel. Sans choix, la BALF du bureau producteur est utilisée. |
+| Contact principal | La personne qui sait répondre sur le contenu. Liste tenue par l'AMDAC. |
+| Commanditaire ou propriétaire | Si différent du producteur. |
+| Fréquence de mise à jour | Sert à repérer les fiches à actualiser. |
+| Système d'information | L'application d'où sort la donnée. Liste tenue par l'AMDAC. |
+| Date de publication | Date. |
+| Date de dernière mise à jour de la donnée | Date. |
 
-> **Par défaut** : la **Licence Ouverte v2.0 (Etalab)** est recommandée pour tous les datasets ouverts (cf. [Charte Open Data](https://data.economie.gouv.fr)).
+**Pour qu'on y accède**
 
-### Niveau 5 — Qualification (accordéon)
+| Libellé | Remarque |
+|---------|----------|
+| URL de téléchargement direct | Lien vers le fichier lui-même. Laissez vide si la donnée n'est pas diffusable. |
+| Formats des données | Plusieurs choix possibles. |
+| Licence juridique | Par défaut, la Licence Ouverte v2.0 (Etalab) pour les données ouvertes. |
+| Volumétrie (Mo) | Taille approximative, en mégaoctets. |
+| URL open data | Page du jeu sur DataEconomie ou data.gouv.fr, si la donnée y est déjà publiée. |
 
-Auto-évaluation de la maturité des métadonnées. Cette section est visible mais les indicateurs se mettent à jour automatiquement.
+**Avant d'enregistrer**
 
-| Label affiché | Type | Description |
-|---------------|------|-------------|
-| **Score de complétude** | Affichage calculé automatiquement | Pourcentage (0-100%) selon les champs remplis |
-| **Badge de maturité** | Affichage calculé automatiquement | Indicateur de maturité basé sur le statut |
-| **Statut de qualification** | Liste déroulante | `En cours`, `À vérifier (métier)`, `Qualifié`, `Certifié` |
+| Libellé | Remarque |
+|---------|----------|
+| Commentaires | Ce qu'un lecteur doit savoir : limite d'interprétation, précaution d'usage. |
+| Demander la validation de cette fiche | Case à cocher. Cochez quand la fiche est prête (voir « Faire valider et certifier »). |
 
----
+Le statut de la fiche n'est pas saisi : il est calculé.
 
-## Comment remplir : pas à pas
+Si votre bureau, un contact ou un système d'information manque dans une liste, écrivez à l'AMDAC, qui tient ces listes. Enregistrez la fiche sans ce champ et complétez-la ensuite.
 
-### Cas 1 : saisie rapide (mode Express)
+### Trois adresses différentes
 
-1. Ouvrir le formulaire.
-2. Remplir les champs obligatoires du Niveau 1 (marqués *).
-3. Cliquer sur **Enregistrer**.
-4. La fiche est créée. Vous pourrez l'enrichir plus tard.
+*   **URL du jeu de données** (dans « L'essentiel ») : la page qui présente la donnée.
+*   **URL de téléchargement direct** : le fichier lui-même.
+*   **URL open data** : la page du jeu sur DataEconomie ou data.gouv.fr.
 
-### Cas 2 : saisie complète (mode Avancé)
+### Documents joints
 
-1. Basculer en **Mode Avancé** (bouton en haut à droite).
-2. Remplir les sections dans l'ordre : Identification, Classification, Organisation, Technique, Qualification.
-3. Vérifier le **score de complétude** dans la section Qualification : il monte au fur et à mesure.
-4. Si le score est à 100%, passer en statut `Qualifié` ou `Certifié`.
-5. Cliquer sur **Enregistrer**.
+Une fois la fiche créée, vous pouvez joindre des documents qui la **décrivent** : dictionnaire des variables, note méthodologique, convention d'accès, guide de lecture. Le bloc « Documents joints » se trouve dans le formulaire de modification de la fiche.
 
-### Modifier une fiche existante
+*   5 documents au maximum, 10 Mo par document (valeurs par défaut).
+*   Formats acceptés : PDF, CSV, TSV, texte, Markdown, Word, Excel, OpenDocument et images courantes. Les archives, exécutables, HTML et SVG sont refusés.
+*   **Ne déposez jamais de données réelles.** Retirez les valeurs d'exemple d'un dictionnaire de variables. Les documents ne sont pas analysés par un antivirus.
+*   Si la fiche décrit des données sensibles ou personnelles, aucun document ne peut être joint.
 
-1. Dans la vue `Catalogue` de Grist, cliquer sur la ligne du dataset à modifier.
-2. Le formulaire se remplit automatiquement avec les données existantes.
-3. Modifier les champs nécessaires.
-4. Cliquer sur **Enregistrer** pour sauvegarder.
+### Enregistrer
 
-### Créer une nouvelle fiche
+Cliquez sur **Enregistrer la fiche**. Pour une fiche existante, ouvrez-la puis **Modifier cette fiche** et cliquez sur **Enregistrer les modifications**. La modification ne crée jamais de nouvelle fiche. **Annuler** quitte le formulaire sans enregistrer. Vos fiches se retrouvent dans **Mon espace**, sous **Mes fiches**.
 
-1. Cliquer sur le bouton **Nouveau** (en haut à gauche du formulaire).
-2. Le formulaire se réinitialise.
-3. Remplir et enregistrer comme décrit ci-dessus.
+## Utiliser l'assistant
 
----
+L'assistant s'appuie sur [Albert](https://ia.numerique.gouv.fr/outils-ia/albert-api/), l'IA de l'État. Une fois connecté, le bouton **Assistant** est en bas à droite de chaque page. Il ouvre un panneau. Il ne s'ouvre jamais seul. Le bouton **Plein écran** l'ouvre en pleine page.
 
-## Bonnes pratiques
+Il sait :
 
-### Ce qu'il faut faire
+*   répondre à vos questions sur les fiches que vous avez le droit de voir, sur vos droits et sur le fonctionnement d'Atlas Bercy ;
+*   vous aider à décrire un jeu de données, en commençant par les quatre champs obligatoires ;
+*   pré-remplir une fiche à partir d'un échantillon de votre fichier, si vous avez un droit de saisie. Formats acceptés : CSV, TSV, TXT, JSON ou NDJSON, 2 Mo au plus. Déposez un échantillon représentatif, **sans données personnelles ni données sensibles**.
 
-- **Une fiche = un dataset**. Une fiche par jeu de données logique, pas par fichier ou par année (sauf si pertinent).
-- **Soyez précis dans la description**. C'est le texte qui permet aux autres de comprendre ce que vous produisez.
-- **Mettez au moins 3 mots-clés**. C'est le principal levier de découverte.
-- **Remplissez le bureau producteur**. C'est ce qui rattache la fiche à votre organisation.
-- **Mettez à jour la date de dernière modification** à chaque actualisation des données.
-- **Indiquez la fréquence de mise à jour**. Un dataset "mensuel" est plus fiable qu'un dataset sans fréquence déclarée.
+Dans le formulaire, les boutons **Proposer une description** et **Proposer des mots-clés** s'appuient aussi sur l'assistant.
 
-### Ce qu'il faut éviter
+**L'assistant n'enregistre jamais seul.** Il affiche un récapitulatif avec deux boutons : **Enregistrer la fiche** et **Ouvrir le formulaire pour relire**. Rien n'est enregistré sans votre clic. Ses réponses peuvent être inexactes : relisez-les. Les fiches préparées et non enregistrées apparaissent dans l'onglet « Brouillons » de **Mon espace**. Elles expirent après quelques heures.
 
-- **Laisser le titre vide ou trop générique**. `dataset-2025` n'est pas un titre utile.
-- **Oublier les mots-clés**. Sans mots-clés, personne ne trouvera vos données.
-- **Mettre des données sensibles sans déclarer la sensibilité**. Consultez le `Niveau de sensibilité`.
-- **Remplir un champ si vous ne connaissez pas la réponse**. Laissez vide. On en reparle.
-- **Confondre URL du dataset et URL de téléchargement**. L'URL du dataset est une page d'information. L'URL de téléchargement est le fichier lui-même (CSV, JSON, etc.).
+## Faire valider et certifier
 
----
+Une fiche a un statut parmi quatre.
 
-## Comprendre le score de complétude
+| Statut | Signification |
+|--------|---------------|
+| **En cours** | La fiche est en cours de saisie. Aucune validation n'est demandée. |
+| **À vérifier (métier)** | Une validation a été demandée. Un valideur de la direction relit la fiche. |
+| **Qualifié** | La fiche est validée (visa de qualification). L'AMDAC peut la certifier. |
+| **Certifié** | L'AMDAC a certifié la fiche, après la validation. |
 
-Le score se calcule automatiquement à partir de 15 champs cibles DCAT-AP :
+Le parcours :
+
+1.  **Demander la validation.** Quand la fiche est prête, cochez « Demander la validation de cette fiche » dans le formulaire. Vous pouvez aussi cliquer sur **Demander la validation** sur la page de la fiche. Le statut devient « À vérifier (métier) ».
+2.  **Valider.** Un valideur de la direction (souvent le chef de bureau) relit la fiche. Il clique sur **Valider la fiche**. Son nom et la date sont enregistrés. Il faut avoir un droit de validation sur la direction. Ce droit ne suppose pas le droit de modifier la fiche.
+3.  **Certifier.** L'AMDAC clique sur **Certifier la fiche**. Ce bouton n'est disponible qu'après une validation.
+
+Une fiche ne vous convient pas ? Il n'y a pas de refus à enregistrer. Utilisez le lien « Signaler un problème au saisisseur » sur la fiche.
+
+### Quand un visa devient périmé
+
+Un visa est conservé dans l'historique. Mais si vous modifiez une **métadonnée essentielle**, il ne porte plus sur le contenu actuel : il est marqué **périmé** et une nouvelle validation est demandée automatiquement. Les champs essentiels sont :
+
+*   Titre
+*   Description
+*   Mots-clés
+*   Niveau de sensibilité
+*   Statut de publication
+*   Licence
+*   Bureau producteur
+
+Les autres modifications ne touchent ni le statut ni les visas. Après une validation périmée, utilisez **Valider de nouveau**. Pour la certification, utilisez **Certifier de nouveau**.
+
+## Complétude et mise à jour
+
+### Le score de complétude
+
+Le score se calcule à partir de 15 champs :
 
 ```
-Champs pris en compte (colonnes Grist) :
-  Titre, Description, Mots_Cles, Statut_Publication,
-  Niveau_Sensibilite, Domaine_Fonctionnel, Langue,
-  Couverture_Geo, Bureau_Producteur, Systeme_d_Information,
-  Frequence_MaJ, Contact, URL_de_telechargement,
-  Format_Donnees, Licence
+Titre, Description, Mots-clés, Statut de publication,
+Niveau de sensibilité, Thème principal, Langue,
+Couverture géographique, Bureau producteur,
+Système d'information, Fréquence de mise à jour,
+Contact principal, URL de téléchargement direct,
+Formats des données, Licence juridique
 ```
 
 | Score | Signification |
@@ -219,31 +218,122 @@ Champs pris en compte (colonnes Grist) :
 | **50%-99%** | Fiche correcte mais perfectible. |
 | **100%** | Fiche complète. Statut recommandé : `Qualifié` ou `Certifié`. |
 
-Le score change en temps réel : chaque champ rempli fait monter le pourcentage.
+Chaque champ rempli fait monter le pourcentage. Le score mesure le remplissage, pas la qualité de la donnée.
 
----
+**Bureau à préciser** : une direction ou un service en bureau producteur compte pour un demi-champ sur 15, soit 3 points de moins.
+
+### Fiches à mettre à jour
+
+Atlas Bercy ajoute à la date de dernière mise à jour de la donnée une période, selon la fréquence de mise à jour déclarée. Il obtient une échéance. Si elle est dépassée, la fiche apparaît dans l'onglet **À mettre à jour** de **Mon espace**.
+
+Le calcul est impossible sans date de dernière mise à jour, sans fréquence, ou avec une fréquence sans période fixe (ponctuelle, temps réel, par exemple). La fiche indique alors le champ à compléter.
+
+## Demander une donnée
+
+Cliquez sur **Demander une donnée**. Vous choisissez ce que vous demandez.
+
+| Type de demande | Quand l'utiliser |
+|-----------------|------------------|
+| **Je cherche une donnée qui n'est pas au catalogue** | Vous ne savez pas forcément qui la produit. L'AMDAC oriente la demande. Elle apparaît dans « Besoins exprimés » pour les agents qui y ont accès. |
+| **Je sais qui produit cette donnée et je veux qu'elle soit décrite** | Indiquez la direction ou le bureau producteur : il est invité à décrire la donnée au catalogue. |
+
+Sur une fiche d'une donnée non ouverte, **Demander l'accès à cette donnée** ouvre une demande d'accès à ce jeu.
+
+Les champs :
+
+*   **De quelle donnée avez-vous besoin ?** (obligatoire, 200 caractères au plus) ;
+*   **À quoi va-t-elle servir ?** : note, étude, tableau de bord… ;
+*   **Pour quand ?** (facultatif) ;
+*   **Direction ou bureau supposé** : obligatoire si vous savez qui produit la donnée, sinon laissez « Je ne sais pas ».
+
+Cliquez sur **Déposer ma demande**. Le bureau concerné, ou l'AMDAC à défaut, vous répond sous 5 jours ouvrés. Vous recevez un courriel à chaque réponse.
+
+**Suivre ma demande** ouvre le détail. Vous retrouvez toutes vos demandes dans **Mon espace**, sous **Mes demandes**.
+
+| Statut | Signification |
+|--------|---------------|
+| Réceptionnée | La demande est enregistrée. |
+| Routée | Elle a été transmise à un destinataire. |
+| En cours de traitement | Le destinataire l'instruit. |
+| Acceptée | Elle est acceptée. |
+| Refusée | Elle est refusée. |
+| Traitée | Elle est traitée. |
+| Annulée | Vous l'avez annulée. |
+
+**Routage.** Un traitement quotidien cherche le destinataire dans cet ordre : la boîte fonctionnelle (BALF) du producteur visé, la BALF du bureau producteur de la fiche liée, la BALF d'une entité parente, le contact de la fiche, puis, à défaut, l'AMDAC. Un seul courriel récapitulatif part par destinataire.
+
+**Annuler.** Tant que la demande n'a pas reçu de réponse définitive (statuts « Réceptionnée », « Routée » ou « En cours de traitement »), cliquez sur **Annuler ma demande** depuis son détail.
+
+**Côté producteur.** Avec un droit de saisie, **Demandes reçues** (dans **Mon espace**) liste les demandes qui vous sont adressées. Cliquez sur **Répondre**, choisissez un statut et rédigez la réponse. Le compteur **À traiter**, dans l'en-tête, regroupe ce qui vous attend : demandes reçues, fiches à valider, fiches à certifier.
+
+## Pour le commanditaire (chef de bureau, direction)
+
+Cette section s'adresse au responsable de la publication de l'entité. Elle fixe le périmètre de la saisie et l'organisation interne.
+
+### Qu'est-ce qu'un « jeu de données » (périmètre) ?
+
+Un **jeu de données (dataset)** est une collection cohérente de données structurées (lignes et colonnes, fichiers connexes) répondant à une même thématique ou à un même processus métier (ex : *Dépenses PLF 2025*, *Annuaire des entités*).
+
+*   **À cataloguer** : les tables de données pérennes, les référentiels métiers, les bases de production ou d'études.
+*   **À ne pas cataloguer** : les documents bureautiques de travail temporaire, les présentations, les rapports d'analyse textuels (sauf s'ils accompagnent un jeu de données en pièce jointe).
+
+### Qui désigner dans mon équipe pour la saisie ?
+
+La saisie demande avant tout une **connaissance métier** de la donnée, pas des compétences techniques.
+
+*   **Profil recommandé** : un chargé d'études, un gestionnaire d'application ou un assistant administratif familier du sujet.
+*   **Compétences requises** : savoir d'où vient la donnée, qui l'utilise, sa fréquence de mise à jour et son niveau de sensibilité.
+*   **Droits** : la personne désignée a besoin d'un droit de saisie. Écrivez à l'AMDAC en indiquant son adresse, sa direction et le droit souhaité (consulter, saisir, valider), ou laissez-la utiliser **Demander des droits**.
+
+### Circuit de validation et gouvernance
+
+1.  **Désignation** : le commanditaire désigne la personne qui saisit et lui transmet le kit d'embarquement.
+2.  **Saisie** : elle remplit la fiche (idéalement les champs essentiels et les accès). Elle laisse la fiche « En cours ».
+3.  **Demander la validation** : elle coche « Demander la validation de cette fiche », ou clique sur **Demander la validation**. Le statut devient « À vérifier (métier) ».
+4.  **Valider la fiche** : un valideur de la direction relit les métadonnées métier et clique sur **Valider la fiche**. La fiche est « Qualifié ». Le commanditaire peut être ce valideur, avec un droit de validation.
+5.  **Certifier la fiche** : l'AMDAC audite la qualité et clique sur **Certifier la fiche**. La fiche est « Certifié ».
+
+Fiches à relire : **Mon espace** (onglets « À valider » et « À certifier »), ou le filtre « À valider » de la recherche.
+
+## Bonnes pratiques
+
+### Ce qu'il faut faire
+
+- **Une fiche = un dataset**. Une fiche par jeu de données logique, pas par fichier ou par année (sauf si pertinent).
+- **Soyez précis dans la description**. C'est le texte qui permet aux autres de comprendre ce que vous produisez.
+- **Mettez au moins 3 mots-clés**. C'est le principal levier de découverte.
+- **Renseignez le bureau producteur**. C'est ce qui rattache la fiche à votre organisation.
+- **Mettez à jour la date de dernière mise à jour de la donnée** à chaque actualisation.
+- **Indiquez la fréquence de mise à jour**. Un dataset « mensuel » est plus fiable qu'un dataset sans fréquence déclarée.
+
+### Ce qu'il faut éviter
+
+- **Laisser le titre vide ou trop générique**. `dataset-2025` n'est pas un titre utile.
+- **Oublier les mots-clés**. Sans mots-clés, personne ne trouvera vos données.
+- **Déposer des données réelles en pièce jointe**. Le catalogue décrit les données, il ne les héberge pas.
+- **Renseigner un champ dont vous ne connaissez pas la réponse**. Laissez-le vide.
+- **Confondre URL du jeu de données et URL de téléchargement**. La première est une page d'information. La seconde est le fichier lui-même (CSV, JSON, etc.).
 
 ## Foire aux questions
 
-> [!NOTE]
-> Cette section rassemble les réponses aux questions les plus fréquentes posées lors de la prise en main de l'outil.
+### 1. Statut de publication ou niveau de sensibilité : quelle différence ?
 
-### 1. Statut de publication vs Niveau de sensibilité : quelle différence ?
+*   **Statut de publication** : le statut de la donnée vis-à-vis de sa mise à disposition générale. « Données ouvertes » se déduit de ce champ.
+*   **Niveau de sensibilité** : ce qui limite la diffusion. Un seul niveau : le plus restrictif qui s'applique.
+*   La présence de données personnelles a sa propre case : « La donnée contient des données à caractère personnel ».
+*   *Exemple* : un jeu contenant des données personnelles se décrit avec la case cochée, un niveau de sensibilité adapté et un statut de publication non ouvert. Les listes de valeurs proposées sont tenues par l'AMDAC.
 
-*   **Statut de publication** : C'est le statut de la donnée vis-à-vis de sa mise à disposition générale (`Données ouvertes`, `Données fermées`, `Données réglementées`).
-*   **Niveau de sensibilité** : C'est la nature de la protection juridique ou de sécurité requise (`Open data`, `Diffusion restreinte`, `Confidentiel`).
-*   *Exemple* : Un jeu de données contenant des informations confidentielles ou personnelles doit avoir un niveau de sensibilité `Données personnelles (RGPD)` ou `Confidentiel`, et un statut de publication à `Données fermées`.
+### 2. Si la donnée n'est pas ouverte, qui voit la fiche ?
 
-### 2. Si je mets "Diffusion restreinte", ma donnée est-elle visible par tout le monde ?
+Une fiche est visible des agents qui ont un droit de lecture sur la direction productrice, ou sur toutes les directions. Ils voient alors tous ses champs. Les autres ne la voient pas.
 
-**Non**. Le fait de renseigner une fiche de métadonnées dans le catalogue permet aux autres agents de savoir que le jeu de données **existe** (découvrabilité) et de savoir **qui contacter** pour en demander l'accès. Toutefois, les données elles-mêmes (fichiers sources) ne sont en aucun cas publiées ou rendues accessibles sans autorisation.
+Pour une donnée non ouverte, l'encart « Accès à la donnée » indique le statut de publication, le niveau de sensibilité et le motif de restriction. Il propose **Demander l'accès à cette donnée**. Les données elles-mêmes ne sont jamais publiées par le catalogue.
 
-### 3. Pourquoi me demande-t-on deux types d'URL ?
+### 3. Pourquoi me demande-t-on plusieurs URL ?
 
-*   **URL du dataset** : Pointeur vers la page d'information, le portail ou l'application métier d'origine (ex: page de présentation Alizée).
-*   **URL de téléchargement direct** : Lien direct permettant de télécharger le fichier brut (ex: lien `.csv`, `.xlsx`, ou API). Si la donnée n'est pas téléchargeable en un clic, laissez ce champ vide.
-
----
+*   **URL du jeu de données** : la page d'information, le portail ou l'application métier d'origine.
+*   **URL de téléchargement direct** : le lien vers le fichier brut (`.csv`, `.xlsx`, API). Si la donnée n'est pas téléchargeable en un clic, laissez ce champ vide.
+*   **URL open data** : la page du jeu sur DataEconomie ou data.gouv.fr, si elle existe.
 
 ## Conventions de nommage (Charte Open Data)
 
@@ -300,23 +390,12 @@ La licence par défaut est la **Licence Ouverte v2.0 (Etalab)**. Elle est recomm
 
 ## Pour aller plus loin (profils expérimentés)
 
-Cette section s'adresse aux administrateurs de données, correspondants data, et agents habitués aux concepts d'architecture de données.
+Cette section s'adresse aux administrateurs de données, correspondants data et agents habitués aux concepts d'architecture de données.
 
-### Rôle et articulation du catalogue Grist
-
-Le catalogue Grist MEF sert de **point d'entrée unique et de pivot** pour le référencement du patrimoine de données.
-*   **Moissonnage & Standardisation** : Les métadonnées saisies respectent le standard **DCAT-AP**.
-*   **Lien Opendatasoft (ODS) / data.gouv.fr** : Le catalogue Grist sera synchronisé périodiquement avec les plateformes de publication open data. Les fiches qualifiées `Données ouvertes` y seront automatiquement indexées.
-*   **Éviter la double saisie** : Les fiches en provenance de ces plateformes seront chargées en lecture seule pour éviter tout conflit de version. Les mises à jour s'effectueront à la source.
-
-### Gouvernance et évolution
-
-L'outil est collaboratif. Si vous souhaitez :
-*   Proposer des évolutions de schémas (nouveaux champs, nouvelles listes de référence).
-*   Suggérer des intégrations d'API ou de flux automatisés.
-*   Rejoindre la communauté des correspondants data du MEF.
-
-Contactez l'administrateur système (AMDAC) via le canal Tchap ou l'adresse [amd@finances.gouv.fr](mailto:amd@finances.gouv.fr).
+*   Les métadonnées saisies suivent le standard **DCAT-AP**, qui sert à échanger entre catalogues.
+*   Les données ouvertes sont publiées sur [data.economie.gouv.fr](https://data.economie.gouv.fr), que data.gouv.fr moissonne. Le champ « URL open data » relie la fiche à la page de publication.
+*   Avec un droit de lecture sur toutes les directions, le bouton **Ouvrir dans Grist** de la recherche ouvre le document Grist du catalogue.
+*   Pour proposer un nouveau champ, une nouvelle liste ou une intégration, écrivez à l'AMDAC.
 
 ---
 
@@ -330,23 +409,13 @@ Le `quality_score` est indicatif mais constitue un bon repère pour identifier l
 
 ---
 
-## Mode diagnostic (dépannage)
-
-En bas du formulaire, une section **Diagnostic & Débogage Grist** est disponible. Elle affiche :
-
-- L'ID du record courant (indique si vous êtes en création ou en édition).
-- Le nombre de bureaux, contacts, thématiques et fréquences chargés depuis les tables de référence.
-- Le record mappé (via FIELD_MAP) et le record brut (pour les techniciens).
-
-Cette section est destinée au support technique. Si quelque chose ne fonctionne pas, ouvrez l'accordéon et partagez la capture avec l'AMDAC.
-
----
-
 ## Besoin d'aide ?
 
-**Contact AMDAC** : [amd@finances.gouv.fr](mailto:amd@finances.gouv.fr)
+*   **AMDAC** : [amd@finances.gouv.fr](mailto:amd@finances.gouv.fr).
+*   **Donner un avis** : le bouton est dans l'en-tête d'Atlas Bercy.
+*   **Aide** : la page Aide du menu explique les parcours, avec des démonstrations commentées.
 
-Vous pouvez également demander un rendez-vous de 30 minutes pour remplir une fiche ensemble ou faire un point sur votre catalogue.
+Vous pouvez aussi demander un rendez-vous de 30 minutes pour remplir une fiche ensemble ou faire le point sur votre catalogue.
 
 ---
 
@@ -357,18 +426,10 @@ Vous pouvez également demander un rendez-vous de 30 minutes pour remplir une fi
 | **Dataset** | Jeu de données. Ensemble structuré d'informations sur un sujet métier donné. |
 | **Métadonnées** | Données qui décrivent les données : titre, description, format, sensibilité, etc. |
 | **DCAT-AP** | European Data Catalogue Application Profile. Standard européen pour les catalogues de données. |
-| **Ref_Entité** | Table de référence contenant l'arborescence organisationnelle (bureaux, directions, etc.). |
-| **Ref_Utilisateur** | Table de référence contenant les utilisateurs du catalogue (contacts). |
-| **Ref_Thème** | Table de référence contenant les thématiques fonctionnelles. |
-| **Ref_GéographicalCoverage** | Table de référence contenant les couvertures géographiques. |
-| **Ref_Frequency** | Table de référence contenant les fréquences de mise à jour. |
-| **Ref_InformationSystem** | Table de référence contenant les systèmes d'information. |
-| **Ref_Format** | Table de référence contenant les formats de données. |
-| **Ref_Licence** | Table de référence contenant les licences juridiques. |
-| **BALF** | Boîte fonctionnelle. Adresse email professionnelle associée à un bureau. |
-| **Grist** | Outil de base de données collaborative utilisé pour le catalogue. |
-| **Widget** | Formulaire web intégré dans Grist pour la saisie des fiches. |
-| **FIELD_MAP** | Mapping interne entre les colonnes Grist et les champs du formulaire HTML. |
-| **RIP** | Répertoire des Informations Publiques. Inventaire obligatoire des informations publiques. |
-| **data.economie.gouv.fr** | Plateforme Open Data des ministères économiques et financiers (Opendatasoft). |
+| **AMDAC** | Administrateur ministériel des données. Il tient les listes de référence et certifie les fiches. |
+| **BALF** | Boîte fonctionnelle. Adresse électronique professionnelle associée à un bureau. |
+| **Visa** | Trace d'une validation (qualification) ou d'une certification. Il porte un nom et une date. |
+| **Complétude** | Pourcentage de champs renseignés parmi 15. Il mesure le remplissage, pas la qualité. |
+| **RIP** | Répertoire des informations publiques. Inventaire des informations publiques. |
+| **data.economie.gouv.fr** | Plateforme open data des ministères économiques et financiers (Opendatasoft). |
 | **data.gouv.fr** | Portail national des données publiques ouvertes. Moissonnage quotidien de data.economie.gouv.fr. |

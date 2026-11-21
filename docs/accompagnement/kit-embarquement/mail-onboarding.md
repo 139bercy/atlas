@@ -10,22 +10,22 @@ Bonjour,
 
 Dans le cadre de la démarche de gouvernance des données ministérielles et de la mise en conformité de notre patrimoine d'informations, nous devons renseigner nos jeux de données dans Atlas Bercy, le catalogue des données des ministères économiques et financiers.
 
-Je vous confie cette mission de catalogage pour notre bureau. Il s'agit de décrire nos jeux de données métiers (ce que l'on appelle les métadonnées : titre, description, contact, fréquence de mise à jour) via un formulaire dédié. 
+Je vous confie cette mission de catalogage pour notre bureau. Il s'agit de décrire nos jeux de données métiers (ce que l'on appelle les métadonnées : titre, description, contact, fréquence de mise à jour) via l'application. Le formulaire de saisie y est simple : quatre champs suffisent pour une première version.
 
 **Aucune compétence technique en informatique ou en data n'est requise**, votre connaissance métier est notre meilleur atout !
 
 Voici les informations et liens utiles pour démarrer :
 
-1.  **Formulaire de saisie** : [Catalogue Grist MEF](https://grist.numerique.gouv.fr/o/catalogue/fWWMJ5ZVPQ5o/Data-Catalog-MEF)
-    *   *Note* : Cliquez sur le bouton en haut à gauche **« Je veux saisir une donnée »** pour ouvrir le formulaire.
+1.  **Application** : [Atlas Bercy](https://proto-catalogue-donnees.lab.miweb.run) (prototype, données fictives)
+    *   *Note* : cliquez sur **Se connecter**, saisissez votre adresse professionnelle, puis ouvrez le lien reçu par courriel. Ensuite, cliquez sur **Saisir une fiche** dans le menu. Il faut pour cela un droit de saisie : à défaut, utilisez **Demander des droits** dans le menu de votre nom.
 2.  **Guide pratique** : Consultez la [Fiche Pratique de Catalogage](https://139bercy.github.io/atlas/) qui explique pas à pas comment remplir les champs (avec des exemples de bons titres/descriptions).
 3.  **Support et entraide** :
-    *   Vous pouvez poser tes questions sur le salon d'entraide Tchap : [Salon Tchap Data Catalog](https://www.tchap.gouv.fr/#/room/!XdeBMEIDEeeVzbCbja:agent.finances.tchap.gouv.fr)
+    *   Vous pouvez poser vos questions sur le salon d'entraide Tchap : [Salon Tchap Data Catalog](https://www.tchap.gouv.fr/#/room/!XdeBMEIDEeeVzbCbja:agent.finances.tchap.gouv.fr)
     *   Contact de l'administrateur ministériel des données (AMDAC) : [amd@finances.gouv.fr](mailto:amd@finances.gouv.fr)
 
 **Prochaines étapes :**
-*   Je vous propose de commencer par remplir les fiches en **Mode Express** (Niveau 1 : Identification) pour les jeux de données majeurs du bureau.
-*   Une fois les fiches saisies, laissez-les au statut `À vérifier (métier)`. Nous ferons un point ensemble pour les valider avant leur qualification définitive par l'AMDAC.
+*   Je vous propose de commencer par remplir les quatre champs de « L'essentiel » (titre, bureau producteur, description, mots-clés) pour les jeux de données majeurs du bureau. Le bouton **Compléter la fiche** ouvre les champs facultatifs.
+*   Une fois les fiches saisies, cochez « Demander la validation de cette fiche ». Le statut devient `À vérifier (métier)`. Nous ferons un point ensemble pour les valider avant leur certification par l'AMDAC.
 
 Si vous avez besoin d'aide ou si vous souhaitez que nous fassions la première saisie ensemble lors d'un point rapide de 30 minutes, n'hésitez pas à me le dire.
 

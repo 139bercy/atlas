@@ -10,7 +10,7 @@
 
 *   **Commanditaire / Validateur métier** : [Nom du chef de bureau / adjoint] — (Valide la cohérence métier des fiches)
 *   **Correspondant Data principal** : [Nom du référent technique/data s'il existe] — (Aide technique de premier niveau)
-*   **Boîte fonctionnelle (BALF) du Bureau** : [Adresse email fonctionnelle] — (Sera insérée automatiquement comme point de contact principal)
+*   **Boîte fonctionnelle (BALF) du Bureau** : [Adresse email fonctionnelle] — (Reprise comme point de contact si le champ « Point de contact : entité » reste vide)
 
 ---
 
@@ -28,25 +28,25 @@ Voici la liste des principaux jeux de données de notre bureau que nous devons c
 
 Pour assurer la cohérence de nos fiches, merci d'utiliser par défaut les valeurs suivantes :
 
-*   **Bureau producteur** : Sélectionner `[Saisir le nom exact tel qu'il apparaît dans l'arborescence Grist]`
-*   **Domaine fonctionnel** : `[Sélectionner le domaine principal du bureau - ex: Finances publiques]`
-*   **Couverture géographique** : `National` (sauf cas particulier)
-*   **Langue** : `Français (FR)`
+*   **Bureau producteur** : Sélectionner `[Saisir le nom exact tel qu'il apparaît dans la liste d'Atlas Bercy]`
+*   **Thème principal** : `[Sélectionner le domaine principal du bureau - ex: Finances publiques]`
+*   **Couverture géographique** : `[maille habituelle du bureau - ex: National]` (sauf cas particulier)
+*   **Langue** : `[langue habituelle - ex: Français]`
 
 ---
 
 ## 4. Sensibilité et publication (règles internes)
 
 *   Nos données étant majoritairement `[restreintes / ouvertes]`, merci de veiller aux réglages suivants :
-    *   Si le jeu de données contient des données personnelles (ex: noms, emails, identifiants agents) : sélectionner impérativement le niveau de sensibilité `Données personnelles (RGPD)` et le statut de publication `Données fermées`.
-    *   Si le jeu de données est destiné à l'open data : sélectionner le statut `Données ouvertes` et utiliser la licence `Licence Ouverte v2.0 (Etalab)`.
+    *   Si le jeu de données contient des données personnelles (ex: noms, emails, identifiants agents) : cocher « La donnée contient des données à caractère personnel », choisir un statut de publication non ouvert et renseigner le « Motif de restriction ».
+    *   Si le jeu de données est destiné à l'open data : sélectionner le statut de publication `Données ouvertes` et utiliser la licence `Licence Ouverte v2.0 (Etalab)`.
 
 ---
 
 ## 5. Circuit de validation du bureau
 
-Une fois la saisie d'une fiche terminée sur Grist :
-1.  Ne pas la passer tout de suite en statut `Qualifié`.
-2.  Mettre le statut de qualification sur **`À vérifier (métier)`**.
-3.  Envoyer un message ou un mail à **[Nom du validateur]** pour lui indiquer que la fiche est prête.
-4.  Après relecture, le validateur ou le correspondant data signalera à l'AMDAC que la fiche peut être certifiée.
+Une fois la saisie d'une fiche terminée dans Atlas Bercy :
+1.  Ne pas la valider soi-même.
+2.  Cocher **« Demander la validation de cette fiche »**, ou cliquer sur **Demander la validation** sur la fiche. Le statut devient **`À vérifier (métier)`**.
+3.  Prévenir **[Nom du validateur]** que la fiche est prête. Il la retrouve dans « Mon espace », onglet « À valider ».
+4.  Après relecture, il clique sur **Valider la fiche** (statut `Qualifié`). L'AMDAC peut ensuite cliquer sur **Certifier la fiche** (statut `Certifié`).

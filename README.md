@@ -1,6 +1,6 @@
 # Atlas Bercy — Fiche pratique de catalogage
 
-Documentation et kit d'embarquement pour le catalogage des données des ministères économiques et financiers (MEF).
+Documentation et kit d'embarquement pour décrire, rechercher et demander des données dans l'application web Atlas Bercy (prototype), le catalogue des données des ministères économiques et financiers (MEF).
 
 ## Contenu
 
