@@ -4,7 +4,7 @@ Documentation et kit d'embarquement pour le catalogage des données des ministè
 
 ## Contenu
 
-- `index.html` : page de rendu DSFR de la fiche pratique (issue de `docs.html`).
+- `index.html` : page de rendu DSFR de la fiche pratique.
 - `css/custom.css` : styles complémentaires au DSFR.
 - `docs/accompagnement/fiche-pratique-catalogage.md` : contenu Markdown de la fiche pratique.
 - `docs/accompagnement/kit-embarquement/` : ressources du kit d'embarquement (`guide-local.md`, `mail-onboarding.md`).

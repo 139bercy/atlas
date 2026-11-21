@@ -1,8 +1,10 @@
 # Fiche pratique — Cataloguer un jeu de données
 
+*Mise à jour : 21 novembre 2026*
+
 ## À quoi sert le catalogue ?
 
-Le catalogue de données des MEF est un classeur Grist partagé permettant de cartographier, qualifier et mettre à disposition les jeux de données produits par les bureaux et directions des ministères économiques et financiers.
+Atlas Bercy est le catalogue des données des ministères économiques et financiers (MEF). Il s'appuie sur un classeur Grist partagé permettant de cartographier, qualifier et mettre à disposition les jeux de données produits par les bureaux et directions des ministères économiques et financiers.
 
 Il répond à trois enjeux :
 
@@ -215,13 +217,13 @@ Champs pris en compte (colonnes Grist) :
 |-------|---------------|
 | **< 50%** | Fiche incomplète. À enrichir rapidement. |
 | **50%-99%** | Fiche correcte mais perfectible. |
-| **100%** | Fiche complète. Statut recommandée : `Qualifié` ou `Certifié`. |
+| **100%** | Fiche complète. Statut recommandé : `Qualifié` ou `Certifié`. |
 
 Le score change en temps réel : chaque champ rempli fait monter le pourcentage.
 
 ---
 
-## ❓ Foire Aux Questions (FAQ) pour les novices
+## Foire aux questions
 
 > [!NOTE]
 > Cette section rassemble les réponses aux questions les plus fréquentes posées lors de la prise en main de l'outil.
@@ -262,7 +264,7 @@ L'identifiant technique est l'identifiant unique du dataset sur data.economie.go
 |---------|-------|---------|
 | `test-` | Jeu de données de test | `test-prix-carburants-v2` |
 | `preprod-` | Jeu de données de préproduction | `preprod-prix-carburants-v2` |
-| `-restreint-` | Diffusion restreinte | `test-interne-prix-carburants-v2` |
+| `-restreint-` | Diffusion restreinte | `test-restreint-prix-carburants-v2` |
 | `-interne-` | Diffusion interne | `test-interne-prix-carburants-v2` |
 
 L'absence de préfixe désigne la **production**.
@@ -296,7 +298,7 @@ La licence par défaut est la **Licence Ouverte v2.0 (Etalab)**. Elle est recomm
 
 ---
 
-## ⚡ Pour aller plus loin (Profils Expérimentés / Data)
+## Pour aller plus loin (profils expérimentés)
 
 Cette section s'adresse aux administrateurs de données, correspondants data, et agents habitués aux concepts d'architecture de données.
 
@@ -369,4 +371,4 @@ Vous pouvez également demander un rendez-vous de 30 minutes pour remplir une fi
 | **FIELD_MAP** | Mapping interne entre les colonnes Grist et les champs du formulaire HTML. |
 | **RIP** | Répertoire des Informations Publiques. Inventaire obligatoire des informations publiques. |
 | **data.economie.gouv.fr** | Plateforme Open Data des ministères économiques et financiers (Opendatasoft). |
-| **data.gouv.fr** | Portail national des données publiques ouvertes. Moisssonage quotidien de data.economie.gouv.fr. |
+| **data.gouv.fr** | Portail national des données publiques ouvertes. Moissonnage quotidien de data.economie.gouv.fr. |
